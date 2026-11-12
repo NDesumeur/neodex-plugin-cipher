@@ -4,8 +4,8 @@ const CSS = `
 .ciGrid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:14px}
 @media (max-width:860px){.ciGrid{grid-template-columns:minmax(0,1fr)}.ciList{flex-direction:row;flex-wrap:wrap}.ciList small{display:none}}
 .ciList{display:flex;flex-direction:column;gap:4px}
-.ciList .btn{text-align:left}
-.ciList small{display:block;font-size:10px;color:var(--muted);margin-top:2px}
+.ciList .btn{text-align:left;white-space:normal;height:auto;min-width:0;overflow:hidden}
+.ciList small{display:block;font-size:10px;color:var(--muted);margin-top:2px;white-space:normal;overflow-wrap:anywhere;line-height:1.3}
 .ciIo{width:100%;min-height:90px;box-sizing:border-box;font:15px monospace}
 .ciRow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}
 .ciRow .f{font:15px monospace}

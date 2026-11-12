@@ -1,0 +1,23 @@
+{
+  "id": "neodex.cipher",
+  "name": "Cipher",
+  "version": "1.0.0",
+  "author": "NDesumeur",
+  "description": "Essaie et comprends neuf méthodes de chiffrement, des plus anciennes aux vraies d'aujourd'hui : César, Vigenère, Atbash, substitution, clôture, Morse, XOR, AES-256 et SHA-256. Pour chacune : chiffrer et déchiffrer, ce qui arrive à chaque lettre, les fréquences comparées au français, son histoire et comment on la casse, avec le cassage automatique de César et de Vigenère.",
+  "icon": "icon.png",
+  "entry": "index.js",
+  "view": "cipher",
+  "neobase": ">=4.0.0",
+  "type": "app",
+  "category": "Outils",
+  "mobile": true,
+  "compatibility": ["windows", "android", "linux"],
+  "syncMode": "fusion",
+  "syncInfo": "La méthode choisie, le texte et les clés (jamais le mot de passe AES).",
+  "system": false,
+  "dependencies": {},
+  "sdk": "2.1.0",
+  "permissions": [
+    "storage"
+  ]
+}

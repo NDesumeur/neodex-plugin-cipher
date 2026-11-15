@@ -31,3 +31,7 @@ Old methods only know 26 letters: "é" becomes "e", "œ" becomes "oe". AES, XOR 
 ## Data
 
 The method, the text and the keys are kept in the plugin's folder. **The AES password is never saved.** Everything is computed on your PC (AES and SHA-256 by the browser's crypto engine). Permission: `storage` only.
+
+## Readability (1.0.2)
+
+Text is larger (input, result, letter-by-letter detail, explanations and frequencies), and the app uses the full window width.

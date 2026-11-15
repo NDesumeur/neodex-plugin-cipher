@@ -1,9 +1,9 @@
 {
   "id": "neodex.cipher",
   "name": "Cipher",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "NDesumeur",
-  "description": "Essaie et comprends neuf méthodes de chiffrement, des plus anciennes aux vraies d'aujourd'hui : César, Vigenère, Atbash, substitution, clôture, Morse, XOR, AES-256 et SHA-256. Pour chacune : chiffrer et déchiffrer, ce qui arrive à chaque lettre, les fréquences comparées au français, son histoire et comment on la casse, avec le cassage automatique de César et de Vigenère.",
+  "description": "Essaie et comprends neuf méthodes de chiffrement, des plus anciennes aux vraies d'aujourd'hui : César, Vigenère, Atbash, substitution, clôture, Morse, XOR, AES-256 et SHA-256. Pour chacune : chiffrer et déchiffrer, ce qui arrive à chaque lettre, les fréquences comparées au français, son histoire et comment on la casse, avec le cassage automatique de César et de Vigenère. Textes plus grands (entrée, résultat, explications, fréquences) et pleine largeur.",
   "icon": "icon.png",
   "entry": "index.js",
   "view": "cipher",

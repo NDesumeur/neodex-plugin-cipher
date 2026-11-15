@@ -1,25 +1,25 @@
 // Cipher : essayer et comprendre les méthodes de chiffrement, des plus anciennes (César, Vigenère) aux vraies d'aujourd'hui (AES, SHA-256),
 // avec pour chacune : chiffrer, déchiffrer, ce qui se passe lettre par lettre, et comment on la casse.
 const CSS = `
-.ciGrid{display:grid;grid-template-columns:220px minmax(0,1fr);gap:14px}
+.ciGrid{display:grid;grid-template-columns:260px minmax(0,1fr);gap:14px}
 @media (max-width:860px){.ciGrid{grid-template-columns:minmax(0,1fr)}.ciList{flex-direction:row;flex-wrap:wrap}.ciList small{display:none}}
 .ciList{display:flex;flex-direction:column;gap:4px}
 .ciList .btn{text-align:left;white-space:normal;height:auto;min-width:0;overflow:hidden}
-.ciList small{display:block;font-size:10px;color:var(--muted);margin-top:2px;white-space:normal;overflow-wrap:anywhere;line-height:1.3}
-.ciIo{width:100%;min-height:90px;box-sizing:border-box;font:15px monospace}
+.ciList small{display:block;font-size:13px;color:var(--muted);margin-top:3px;white-space:normal;overflow-wrap:anywhere;line-height:1.3}
+.ciIo{width:100%;min-height:110px;box-sizing:border-box;font:17px/1.5 monospace}
 .ciRow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:8px 0}
-.ciRow .f{font:15px monospace}
-.ciOut{font:15px monospace;white-space:pre-wrap;word-break:break-all;background:var(--bg0);border:2px solid var(--line);padding:10px;min-height:40px;color:#fff}
-.ciMap{font:14px monospace;overflow-x:auto;white-space:pre;line-height:1.5;background:var(--bg0);border:2px solid var(--line);padding:8px;color:var(--lilac)}
+.ciRow .f{font:17px monospace}
+.ciOut{font:17px/1.5 monospace;white-space:pre-wrap;word-break:break-all;background:var(--bg0);border:2px solid var(--line);padding:10px;min-height:40px;color:#fff}
+.ciMap{font:16px monospace;overflow-x:auto;white-space:pre;line-height:1.5;background:var(--bg0);border:2px solid var(--line);padding:8px;color:var(--lilac)}
 .ciMap b{color:#ffd34f;font-weight:normal}
 .ciMap i{color:#7fe0ff;font-style:normal}
-.ciHelp{font-size:13px;line-height:1.55;color:var(--lilac)}
+.ciHelp{font-size:16px;line-height:1.55;color:var(--lilac)}
 .ciHelp b{color:#fff}
 .ciFreq{display:flex;align-items:flex-end;gap:2px;height:110px;margin-top:8px}
-.ciFreq div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font:10px monospace;color:var(--muted);height:100%}
+.ciFreq div{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;font:13px monospace;color:var(--muted);height:100%}
 .ciFreq span{display:block;width:100%}
 .ciFreq .a{background:#ff4fb0}.ciFreq .b{background:#7fe0ff;opacity:.6}
-.ciBrute{font:13px monospace;max-height:260px;overflow:auto;background:var(--bg0);border:2px solid var(--line);padding:6px}
+.ciBrute{font:15px monospace;max-height:320px;overflow:auto;background:var(--bg0);border:2px solid var(--line);padding:6px}
 .ciBrute div{padding:2px 4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;cursor:var(--cp,pointer)}
 .ciBrute div.best{background:rgba(var(--pkr),.3);color:#fff}
 .ciBrute div:hover{outline:1px solid var(--magenta)}
@@ -90,7 +90,7 @@ export default async function (ctx) {
       && rail(rail(t, 4, 1).out, 4, -1).out === t && caesar('Zz', 1) === 'Aa' && vigenere('attack at dawn', 'LEMON', 1).out === 'lxfopv ef rnhr', 'cipher : allers-retours'); }
 
   view.innerHTML = '';
-  const wrap = el('div', 'appWrap'), head = el('div', 'agHead'), grid = el('div', 'ciGrid'), list = el('div', 'ciList'), main = el('div');
+  const wrap = el('div', 'appWrap wide'), head = el('div', 'agHead'), grid = el('div', 'ciGrid'), list = el('div', 'ciList'), main = el('div');
   head.append(el('span', 'label', 'Cipher · tester et comprendre le chiffrement')); grid.append(list, main); wrap.append(head, grid); view.append(wrap);
   function drawList() {
     list.replaceChildren(...METHODS.map(([k, n, d]) => { const b = el('button', 'btn px' + (st.m === k ? ' main' : '')); b.dataset.m = k; b.append(n, el('small', '', d)); b.onclick = () => { st.m = k; save(); drawList(); draw(); }; return b; }));

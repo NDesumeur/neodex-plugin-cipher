@@ -31,3 +31,7 @@ Les méthodes anciennes ne connaissent que 26 lettres : « é » devient « e »
 ## Données
 
 La méthode, le texte et les clés sont gardés dans le dossier du plugin. **Le mot de passe AES n'est jamais enregistré.** Tout se calcule sur ton PC (AES et SHA-256 par le moteur de chiffrement du navigateur). Autorisation : `storage` seulement.
+
+## Lisibilité (1.0.2)
+
+Les textes sont plus grands (l’entrée, le résultat, le détail lettre par lettre, les explications et les fréquences), et l’appli prend toute la largeur de la fenêtre.

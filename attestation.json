@@ -1,9 +1,9 @@
 {
   "pluginId": "neodex.cipher",
   "repo": "NDesumeur/neodex-plugin-cipher",
-  "version": "1.0.1",
-  "sha256": "cde94d5577d3da9a302f1303879314b53c7446af2de731171b35501068aef0de",
-  "approvedAt": "2026-11-12T17:01:01.472Z",
+  "version": "1.0.2",
+  "sha256": "e6ee5f8848fae4b7f48f4a9bd8766d77735ed0d40e614054ff6d9919ad822033",
+  "approvedAt": "2026-11-16T04:14:34.832Z",
   "neobase": ">=4.0.0",
-  "signature": "K6xqIMWKpNi1PJU984P9SYslFHx2cyVFrygpruud1XSeCfiQOlHr7SY7+93mjlvPrY6n0kmjqwRyATWpMWdMCQ=="
+  "signature": "o5saBtD+hGmBRh8eFPVU3z7PTtgw0n7hQH/fUOIaO0wcg9FWlFIOPvVcllZNXlF6ZOlhQJS9Q2kO646/UmyxBA=="
 }
